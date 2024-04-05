@@ -28,6 +28,14 @@ describe("SimpleStorage", function () {
         const updatedValue = await simpleStorage.fetch();
         assert.equal(updatedValue.toString(), expectedValue);
     });
+
+    it("Should add a new person", async function () {
+        const tx = await simpleStorage.addPerson("Ankit", 5);
+        await tx.wait(1);
+        const addedPerson = await simpleStorage.people(0);
+
+        assert.equal((addedPerson[0], addedPerson[1]), ("Ankit", 5));
+    });
 });
 
 // To run: yarn hardhat test

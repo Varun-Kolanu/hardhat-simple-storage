@@ -3,6 +3,7 @@ require("@nomicfoundation/hardhat-verify");
 require("dotenv").config();
 require("./tasks/block-number.cjs");
 require("hardhat-gas-reporter");
+require("solidity-coverage");
 
 const SEPOLIA_RPC_URL =
     process.env.SEPOLIA_RPC_URL || "https://eth-sepolia-example";
@@ -34,7 +35,7 @@ module.exports = {
         outputFile: "gas-report.txt",
         noColors: true,
         currency: "USD",
-        coinmarketcap: COINMARKETCAP_API_KEY, // comment for no api call
+        // coinmarketcap: COINMARKETCAP_API_KEY, // comment for no api call
         // L1: "polygon", // Default: ethereum
     },
 };
