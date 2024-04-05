@@ -16,7 +16,7 @@
     "chai": "^4.2.0",
     "ethers": "^6.4.0",
     "hardhat": "^2.22.2",
-    "hardhat-gas-reporter": "^1.0.8",
+    "hardhat-gas-reporter": "^2.1.0",
     "solidity-coverage": "^0.8.0",
     "typechain": "^8.3.0"
   },
@@ -27,6 +27,7 @@
   },
   "scripts": {
     "deploy": "yarn hardhat run ./scripts/deploy.js",
-    "create-network": "yarn hardhat node"
+    "create-network": "yarn hardhat node",
+    "test": "yarn hardhat test"
   }
 }
